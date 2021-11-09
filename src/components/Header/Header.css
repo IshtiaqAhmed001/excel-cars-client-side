@@ -1,0 +1,24 @@
+.navLink{
+    text-decoration: none;
+    font-weight: 600;
+    color: whitesmoke;
+    margin: 0 10px;
+    padding: 10px;
+}
+.navLink:hover{
+    color:#F33F3F;
+}
+.user-name{
+    background-color: #212531;
+    border: none;
+    font-weight: 600;
+}
+.nav-button{
+    background-color: #212531;
+    border: none;
+    font-weight: 600;
+    color: whitesmoke;
+}
+.nav-button:hover{
+    color:goldenrod;
+}
