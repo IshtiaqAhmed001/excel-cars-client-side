@@ -18,7 +18,7 @@ const Header = () => {
                         <NavLink className="navLink" to="/login">Login</NavLink>
                         {
                             user.displayName && <Nav>
-                                <NavLink className="navLink" to="/addnewcar">Add a New Deal</NavLink>
+                                <NavLink className="navLink" to="/addnewcar">Add a New Car</NavLink>
                                 <NavLink className="navLink" to="/myorders">My Orders</NavLink>
                                 <NavLink className="navLink" to="/manageallbookings">Manage All Orders</NavLink>
                                 <button className="user-name text-danger fw-bold" >{user.displayName}</button>

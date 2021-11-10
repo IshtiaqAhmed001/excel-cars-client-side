@@ -1,4 +1,8 @@
+.card-container{
+    background-color:#f8889727;
+}
 .card-img{
     width: 150px;
     border-radius: 50%;
 }
+

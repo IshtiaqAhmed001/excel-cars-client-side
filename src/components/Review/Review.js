@@ -7,7 +7,7 @@ const Review = ({ review }) => {
 
     const { name, img, ordered, comment, ratings } = review;
     return (
-        <Card className="w-100 mx-auto">
+        <Card className="w-100 mx-auto card-container">
             <Card.Img className="mt-3 mx-auto card-img" variant="top" src={img} />
             <Card.Body>
                 {/* dynamic ratings */}
