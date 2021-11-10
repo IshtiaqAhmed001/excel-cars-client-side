@@ -1,62 +1,22 @@
 import React from 'react';
 import './Home.css';
-import img1 from '../../images/New folder/1.jpg';
-import img2 from '../../images/New folder/2.jpg';
-import img3 from '../../images/New folder/3.jpg';
-import img4 from '../../images/New folder/4.jpg';
-import img5 from '../../images/New folder/5.jpg';
-import img6 from '../../images/New folder/6.jpg';
+import topBannerImg from '../../images/topbanner.png';
+
 import { Carousel } from 'react-bootstrap';
 const Home = () => {
     return (
         <div>
-            <div className="slider">
-                <Carousel fade>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={img1}
-                            alt="First slide"
-                        />
-                        <Carousel.Caption>
-                            <h1 className="slider-title title1 display-1" >Find the right car for you</h1>
-                            <p className="text-dark fs-5">We have more than a thousand cars for you to choose</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={img2}
-                            alt="First slide"
-                        />
-                        <Carousel.Caption>
-                            <h1 className="slider-title title1 display-1" >Find the right car for you</h1>
-                            <p className="text-dark fs-5">We have more than a thousand cars for you to choose</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={img3}
-                            alt="First slide"
-                        />
-                        <Carousel.Caption>
-                            <h1 className="slider-title title1 display-1" >Find the right car for you</h1>
-                            <p className="text-dark fs-5">We have more than a thousand cars for you to choose</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={img4}
-                            alt="First slide"
-                        />
-                        <Carousel.Caption>
-                            <h1 className="slider-title title1 display-1" >Find the right car for you</h1>
-                            <p className="text-dark fs-5">We have more than a thousand cars for you to choose</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
+            <div className="row">
+                <div className="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center justify-content-center">
+                    <div className="text-start">
+                        <h1>Find Your Next Car at Excel Cars</h1>
+                        <p>Allow us to guide you through the innovative stress
+                            free approach in finding your dream car.</p>
+                    </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                    <img className="w-75" src={topBannerImg}></img>
+                </div>
             </div>
         </div>
     );
