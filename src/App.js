@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import AuthProvider from './components/context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               <Register></Register>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

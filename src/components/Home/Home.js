@@ -1,20 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Home.css';
-import topBannerImg from '../../images/topbanner.png';
-
-import { Carousel } from 'react-bootstrap';
 import Car from '../Car/Car';
+import useCars from '../../hooks/useCars';
+import useReviews from '../../hooks/useReviews';
+import Review from '../Review/Review';
+import { Carousel } from 'react-bootstrap';
 const Home = () => {
-
-
-    const [cars, setCars] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/cars')
-            .then(res => res.json())
-            .then(data => setCars(data))
-    }, [])
-
-
+    const { cars } = useCars();
+    const { reviews } = useReviews();
     return (
         <div>
             <div className="row g-0">
@@ -26,11 +19,11 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
-                    <img className="w-100" src={topBannerImg}></img>
+                    <img className="w-100" src="https://i.ibb.co/37d8bN6/topbanner.png" alt="" />
                 </div>
             </div>
             {/* featured cars  */}
-            <div>
+            <div className="featured-cars">
                 <h2 className="fw-bold mt-5">Discover Our Featured Models</h2>
                 <hr className="w-25 mx-auto text-dark " />
                 <p className="my-5 w-50 mx-auto text-secondary">A masterful combination of style, power, sporty handling and comfort. A masterful combination of style, power, sporty handling and comfort.</p>
@@ -40,6 +33,18 @@ const Home = () => {
                             key={car._id}
                             car={car}></Car>)
                     }
+                </div>
+                {/* reviews section */}
+                <div className="reviews-section">
+                    <h1 className="fw-bold mt-5">What our clients say about us</h1>
+                    <p className="text-secondary mb-5">Satisfied customers on Excel Cars</p>
+                    <div className="review-slider my-5">
+                        <Carousel className="w-75 mx-auto" variant="dark">
+                            {
+                                reviews.map(review => <Carousel.Item className><Review review={review}> </Review> </Carousel.Item>)
+                            }
+                        </Carousel>
+                    </div>
                 </div>
             </div>
         </div>
