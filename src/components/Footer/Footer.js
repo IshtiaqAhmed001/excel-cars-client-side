@@ -17,12 +17,7 @@ const Footer = () => {
                     <div className="mt-4 col-lg-4 col-md-6 col-sm-12">
                         <h1 className="text-start text-danger">Excel Cars</h1>
 
-                        <div className="text-start my-5">
-                            <NavLink className="link-styles" to="/blabla">{fbIcon}</NavLink>
-                            <NavLink className="link-styles" to="/blabla">{linkedInIcon}</NavLink>
-                            <NavLink className="link-styles" to="/blabla">{twitterIcon}</NavLink>
-                            <NavLink className="link-styles" to="/blabla">{youtubeIcon}</NavLink>
-                        </div>
+
                     </div>
                     <div className="mt-4 col-lg-4 col-md-6 col-sm-12">
 
@@ -41,7 +36,14 @@ const Footer = () => {
                             <li >Gulshan-11, Dhaka</li>
                             <li>email: ishtiaq.wasi@gmail.com</li>
                             <li>Phone: +880253652665</li>
+                            <div className="text-start mt-3">
+                                <NavLink className="link-styles" to="/">{fbIcon}</NavLink>
+                                <NavLink className="link-styles" to="/">{linkedInIcon}</NavLink>
+                                <NavLink className="link-styles" to="/">{twitterIcon}</NavLink>
+                                <NavLink className="link-styles" to="/">{youtubeIcon}</NavLink>
+                            </div>
                         </ul>
+
                     </div>
                 </div>
                 <p>© 2021 Excel Cars Ltd. All rights reserved.</p>

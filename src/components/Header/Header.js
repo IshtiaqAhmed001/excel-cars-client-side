@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 import './Header.css';
 
 const Header = () => {
-    const { user } = useAuth();
+    const { user, logOut } = useAuth();
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
@@ -15,7 +15,6 @@ const Header = () => {
                     <Nav className="ms-auto">
                         <NavLink className="navLink" to="/home">Home</NavLink>
                         <NavLink className="navLink" to="/cars">Cars</NavLink>
-                        <NavLink className="navLink" to="/login">Login</NavLink>
                         {
                             user.displayName && <Nav>
                                 <NavLink className="navLink" to="/addnewcar">Add a New Car</NavLink>
@@ -23,6 +22,12 @@ const Header = () => {
                                 <NavLink className="navLink" to="/manageallbookings">Manage All Orders</NavLink>
                                 <button className="user-name text-danger fw-bold" >{user.displayName}</button>
                             </Nav>
+                        }
+                        {
+                            user.email ? <button className="nav-button" onClick={logOut}>Log Out</button>
+                                :
+                                <NavLink className="navLink" to="/login">Login</NavLink>
+
                         }
                     </Nav>
                 </Navbar.Collapse>
