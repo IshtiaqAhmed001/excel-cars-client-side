@@ -17,7 +17,7 @@ const Dashboard = () => {
                         </li>
                         <li className="my-3"><NavLink className="navLink" to="/manageallproducts">Manage All Products</NavLink>
                         </li>
-                        <li className="my-3"><NavLink className="navLink" to="/addReview">Review</NavLink>
+                        <li className="my-3"><NavLink className="navLink" to="/addnewreview">Add Review</NavLink>
                         </li>
                         <li className="my-3"><NavLink className="navLink" to="/makepayment">Make Payment</NavLink>
                         </li>

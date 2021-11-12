@@ -22,7 +22,7 @@ const ManageAllProducts = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert('Order canceled!');
+                        alert('Product Deleted!');
                         window.location.reload();
                     }
                 })

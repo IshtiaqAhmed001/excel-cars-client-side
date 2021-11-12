@@ -17,6 +17,7 @@ import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
 import MyOrders from './components/MyOrders/MyOrders';
 import MakePayment from './components/MakePayment/MakePayment';
 import ManageAllProducts from './components/ManageAllProducts/ManageAllProducts';
+import AddNewReview from './components/AddNewReview/AddNewReview';
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute exact path="/myorders">
               <MyOrders></MyOrders>
+            </PrivateRoute>
+            <PrivateRoute exact path="/addnewreview">
+              <AddNewReview></AddNewReview>
             </PrivateRoute>
             <PrivateRoute exact path="/makepayment">
               <MakePayment></MakePayment>

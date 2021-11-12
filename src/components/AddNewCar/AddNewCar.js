@@ -52,9 +52,6 @@ const AddNewCar = () => {
                     <input className="form-control" placeholder="Seats"  {...register("seats", { required: true })} />
                     <br />
 
-
-
-
                     {errors.exampleRequired && <span>This field is required</span>}
 
                     <input className="btn btn-lg btn-danger p-2 w-25" value="Add Car" type="submit" />
