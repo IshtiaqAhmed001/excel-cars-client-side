@@ -10,6 +10,13 @@ import AuthProvider from './components/context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 import Footer from './components/Footer/Footer';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import Dashboard from './components/Dashboard/Dashboard';
+import AddNewCar from './components/AddNewCar/AddNewCar';
+import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
+import MyOrders from './components/MyOrders/MyOrders';
+import MakePayment from './components/MakePayment/MakePayment';
+import ManageAllProducts from './components/ManageAllProducts/ManageAllProducts';
 
 
 function App() {
@@ -25,8 +32,29 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/cars">
+            <PrivateRoute exact path="/addnewcar">
+              <AddNewCar></AddNewCar>
+            </PrivateRoute>
+            <PrivateRoute exact path="/manageallorders">
+              <ManageAllOrders></ManageAllOrders>
+            </PrivateRoute>
+            <PrivateRoute exact path="/manageallproducts">
+              <ManageAllProducts></ManageAllProducts>
+            </PrivateRoute>
+            <PrivateRoute exact path="/myorders">
+              <MyOrders></MyOrders>
+            </PrivateRoute>
+            <PrivateRoute exact path="/makepayment">
+              <MakePayment></MakePayment>
+            </PrivateRoute>
+            <PrivateRoute exact path="/cars/placeorder/:id">
+              <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
+            <Route path="/cars">
               <Cars></Cars>
+            </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
