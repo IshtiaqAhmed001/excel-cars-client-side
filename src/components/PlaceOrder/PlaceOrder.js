@@ -14,7 +14,7 @@ const PlaceOrder = () => {
 
     const onSubmit = data => {
         const { name, email, address, city, phone } = data;
-        let newOrder = { name, email, address, city, phone };
+        let newOrder = { status: 'processing', name, email, address, city, phone };
         newOrder.itemDetails = singleCar[0];
         fetch('http://localhost:5000/placeorder', {
             method: 'POST',
