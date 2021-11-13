@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Spinner } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import useRegisteredUsers from '../../hooks/useRegisteredUsers';
@@ -7,6 +8,7 @@ import './Dashboard.css';
 const Dashboard = () => {
     const { user, logOut } = useAuth();
     const { registeredUsers } = useRegisteredUsers();
+
     // filtering logged in user from all users 
     const registeredUser = registeredUsers.filter(regUser => regUser.email === user.email);
     const loggedInUser = registeredUser[0];
@@ -20,6 +22,8 @@ const Dashboard = () => {
                         </li>
                         <li className="my-3"> <NavLink className="navLink" to="/addnewcar">Add a New Car</NavLink></li>
                         <li className="my-3"><NavLink className="navLink" to="/manageallorders">Manage All Orders</NavLink>
+                        </li>
+                        <li className="my-3"><NavLink className="navLink" to="/makeadmin">Make Admin</NavLink>
                         </li>
                         <li className="my-3"><button className="side-bar-logout-btn" onClick={logOut}>Log Out</button></li>
                     </ul> : <ul>

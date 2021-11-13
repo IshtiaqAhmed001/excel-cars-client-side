@@ -2,9 +2,14 @@ import React from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Route, Redirect } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import useRegisteredUsers from '../../hooks/useRegisteredUsers';
 
 const AdminRoute = ({ children, ...rest }) => {
-    const { user, isLoading } = useAuth();
+    const { user } = useAuth();
+    const { registeredUsers, isLoading } = useRegisteredUsers();
+    // filtering logged in user from all users 
+    const registeredUser = registeredUsers.filter(regUser => regUser.email === user.email);
+    const loggedInUser = registeredUser[0];
 
     if (isLoading) {
         return <div class="text-center">
@@ -17,9 +22,9 @@ const AdminRoute = ({ children, ...rest }) => {
         <Route
             {...rest}
             render={
-                ({ location }) => user.email && user.role === 'admin' ? children : <Redirect
+                ({ location }) => loggedInUser?.email && loggedInUser.role === 'admin' ? children : <Redirect
                     to={{
-                        pathname: "/",
+                        pathname: "/dashboard",
                         state: { from: location }
                     }}></Redirect>}
         >

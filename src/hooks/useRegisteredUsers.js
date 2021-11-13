@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 
 const useRegisteredUsers = () => {
+    const [isLoading, setIsLoading] = useState(true);
+
     const [registeredUsers, setRegisteredUsers] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/users')
             .then(res => res.json())
-            .then(data => setRegisteredUsers(data));
+            .then(data => {
+                setRegisteredUsers(data)
+                setIsLoading(false);
+            });
     }, []);
 
-    return { registeredUsers, setRegisteredUsers }
+
+    return { registeredUsers, setRegisteredUsers, isLoading }
 }
 
 export default useRegisteredUsers;

@@ -19,6 +19,7 @@ import MakePayment from './components/MakePayment/MakePayment';
 import ManageAllProducts from './components/ManageAllProducts/ManageAllProducts';
 import AddNewReview from './components/AddNewReview/AddNewReview';
 import AdminRoute from './components/AdminRoute/AdminRoute';
+import MakeAdmin from './components/MakeAdmin/MakeAdmin';
 
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
             </AdminRoute>
             <AdminRoute exact path="/manageallproducts">
               <ManageAllProducts></ManageAllProducts>
+            </AdminRoute>
+            <AdminRoute exact path="/makeadmin">
+              <MakeAdmin></MakeAdmin>
             </AdminRoute>
             <PrivateRoute exact path="/myorders">
               <MyOrders></MyOrders>
