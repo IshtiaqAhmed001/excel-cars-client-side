@@ -16,6 +16,7 @@ const Footer = () => {
                 <div className="row g-4 mx-auto">
                     <div className="mt-4 col-lg-4 col-md-6 col-sm-12">
                         <h1 className="text-start text-white">Excel Cars</h1>
+                        <p className="text-start">Excel Cars offering the best to make your dream come true. Order your dream car today !</p>
                         <div className="text-start mt-3">
                             <NavLink className="link-styles" to="/">{fbIcon}</NavLink>
                             <NavLink className="link-styles" to="/">{linkedInIcon}</NavLink>
