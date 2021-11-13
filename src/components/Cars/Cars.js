@@ -3,7 +3,7 @@ import { Spinner } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import useCars from '../../hooks/useCars';
 import Car from '../Car/Car';
-
+import bg from '../../images/BannerCars/1 (1).jpg';
 const Cars = () => {
     const { cars } = useCars();
     const { isLoading } = useAuth();
@@ -15,15 +15,20 @@ const Cars = () => {
         </div>
     }
     return (
-        <div className="my-5 container">
-            <h2 className="fw-bold mt-5">Our current stocks</h2>
-            <hr className="w-25 mb-5 mx-auto text-dark " />
-            <div className="row g-4">
-                {
-                    cars.map(car => <Car
-                        key={car._id}
-                        car={car}></Car>)
-                }
+        <div>
+            <div >
+                <img className="w-100" src={bg} alt="" />
+            </div>
+            <div className="my-5 container">
+                <h1 className="text-start text-primary fs-5 mt-5 fw-bold">Our current stocks</h1>
+                <hr className="w-25 mb-5 text-primary" />
+                <div className="row g-4">
+                    {
+                        cars.map(car => <Car
+                            key={car._id}
+                            car={car}></Car>)
+                    }
+                </div>
             </div>
         </div>
     );
