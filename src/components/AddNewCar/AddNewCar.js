@@ -5,9 +5,9 @@ const AddNewCar = () => {
 
     const onSubmit = data => {
 
-        const { name, price, img, coverImg, madeIn, milage, fuel, mode, seats, released, color } = data;
+        const { name, price, img, coverImg, madeIn, topSpeed, fuel, mode, seats, released, color } = data;
 
-        const newCar = { name, price, img, coverImg, madeIn, milage, fuel, mode, seats, released, color };
+        const newCar = { name, price, img, coverImg, madeIn, topSpeed, fuel, mode, seats, released, color };
 
         fetch('https://floating-taiga-26098.herokuapp.com/cars', {
             method: 'POST',
@@ -49,7 +49,7 @@ const AddNewCar = () => {
                     <br />
                     <input className="form-control" placeholder="Fuel Type"  {...register("fuel", { required: true })} />
                     <br />
-                    <input className="form-control" placeholder="Milage"  {...register("milage", { required: true })} />
+                    <input className="form-control" placeholder="topSpeed"  {...register("topSpeed", { required: true })} />
                     <br />
                     <input className="form-control" placeholder="Seats"  {...register("seats", { required: true })} />
                     <br />

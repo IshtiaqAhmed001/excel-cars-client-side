@@ -4,7 +4,7 @@ import { faMapMarkerAlt, faDollarSign, faRoad } from '@fortawesome/free-solid-sv
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Car = ({ car }) => {
-    const { _id, img, name, price, madeIn, milage, fuel, mode, seats, released, color } = car;
+    const { _id, img, name, price, madeIn, topSpeed, fuel, mode, seats, released, color } = car;
 
     const history = useHistory();
 
@@ -21,7 +21,7 @@ const Car = ({ car }) => {
                     <hr className="w-75" />
                     <div className="d-flex justify-content-between">
                         <h6><FontAwesomeIcon icon={faDollarSign} /> <span className="text-primary">{price}</span> </h6>
-                        <h6 ><FontAwesomeIcon icon={faRoad} /> <span className="text-primary">{milage}</span></h6>
+                        <h6 ><FontAwesomeIcon icon={faRoad} /> <span className="text-primary">{topSpeed}</span></h6>
                     </div>
                     <h6 className="text-start"><small><FontAwesomeIcon icon={faMapMarkerAlt} /> {madeIn}</small></h6>
 

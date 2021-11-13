@@ -3,7 +3,6 @@ import { Spinner } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import useCars from '../../hooks/useCars';
 import Car from '../Car/Car';
-import bg from '../../images/BannerCars/1 (1).jpg';
 const Cars = () => {
     const { cars } = useCars();
     const { isLoading } = useAuth();
@@ -17,7 +16,7 @@ const Cars = () => {
     return (
         <div>
             <div >
-                <img className="w-100" src={bg} alt="" />
+                <img className="w-100" src="https://i.ibb.co/HKHWgss/car-Banner.jpg" alt="" />
             </div>
             <div className="my-5 container">
                 <h1 className="text-start text-primary fs-5 mt-5 fw-bold">Our current stocks</h1>
