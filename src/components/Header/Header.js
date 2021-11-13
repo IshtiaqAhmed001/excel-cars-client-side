@@ -7,7 +7,7 @@ import './Header.css';
 const Header = () => {
     const { user, logOut } = useAuth();
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
             <Container>
                 <NavLink className="navLink" to="/home">Excel Cars</NavLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -18,7 +18,7 @@ const Header = () => {
                         {
                             user.displayName && <Nav>
                                 <NavLink className="navLink" to="/dashboard">Dashboard</NavLink>
-                                <button className="user-name text-danger fw-bold" >{user.displayName}</button>
+                                <button className="user-name text-dark fw-bold" >{user.displayName}</button>
                             </Nav>
                         }
                         {

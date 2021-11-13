@@ -26,11 +26,11 @@ const Home = () => {
                 </div>
             </div>
             {/* featured cars  */}
-            <div className="featured-cars">
+            <div className="featured-cars container">
                 <h2 className="featured-title fw-bold mt-5">Discover Our Featured Models</h2>
                 <hr className="w-25 mx-auto text-dark " />
                 <p className="my-5 w-50 mx-auto text-secondary">A masterful combination of style, power, sporty handling and comfort. A masterful combination of style, power, sporty handling and comfort.</p>
-                <div className="row gx-0 gy-2">
+                <div className="row g-4">
                     {
                         featuredCars.map(car => <Car
                             key={car._id}
