@@ -21,3 +21,11 @@ li{
 .link-styles:hover{
     color: lightcoral;
 }
+.footerLink{
+    text-decoration: none;
+    font-weight: 600;
+    color: whitesmoke;
+}
+.footerLink:hover{
+    color:#F33F3F;
+}
