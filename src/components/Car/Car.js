@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router';
-import { faMapMarkerAlt, faDollarSign, faRoad } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt, faDollarSign, faRoad } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Car = ({ car }) => {

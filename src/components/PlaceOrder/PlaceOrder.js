@@ -1,9 +1,10 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import useCars from '../../hooks/useCars';
-
+import { faMapMarkerAlt, faDollarSign, faRoad } from '@fortawesome/free-solid-svg-icons';
 const PlaceOrder = () => {
     const { user } = useAuth();
     const { id } = useParams();
@@ -33,15 +34,19 @@ const PlaceOrder = () => {
 
         console.log(data)
     };
-
     return (
         <div>
-            <div className="my-5 ">
-                {singleCar.map(car => <div key={car._id}><img className="rounded-3" src={car.img} alt="" />
-                    <h3>{car.name}</h3>
-                    <h4>{car.price}</h4>
-                    <h6>{car.madeIn}</h6>
-                    <button className="btn w-75 btn-danger">Buy Now</button></div>)}
+            <div className="mb-5">
+                {singleCar.map(car => <div key={car._id}><div>
+                    <h1 className="text-center display-1 bg-dark text-white fw-bold">{car.name}</h1>
+                    <img className="w-100" src={car.coverImg} alt="" />
+                    <div className="text-start mx-2 my-2">
+                        <h3 className="text-start"><small><FontAwesomeIcon icon={faMapMarkerAlt} /> {car.madeIn}</small></h3>
+                        <h3><FontAwesomeIcon icon={faDollarSign} /><span > {car.price}</span> </h3>
+                        <h3 ><FontAwesomeIcon icon={faRoad} /> <span >{car.topSpeed}</span></h3>
+                        <h5 className="text-start"><small>{car.released} • {car.mode} • {car.color} • {car.fuel} • {car.seats}</small></h5>
+                    </div>
+                </div></div>)}
 
             </div>
             <div className="my-1">
