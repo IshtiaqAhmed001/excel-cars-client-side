@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 
 
 const Register = () => {
-    const { signInWithGoogle, createAccountWithEmail, updateName, setUser, setIsLoading } = useAuth();
+    const { createAccountWithEmail, updateName, setUser, saveUser, setIsLoading } = useAuth();
 
     const history = useHistory();
     const location = useLocation();
@@ -35,6 +35,7 @@ const Register = () => {
                 setIsLoading(true);
                 updateName(name);
                 setUser(res.user);
+                saveUser(email, name, 'POST');
                 history.push(url);
             })
             .catch((error) => {

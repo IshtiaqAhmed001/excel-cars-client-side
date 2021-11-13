@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 
 
 const Login = () => {
-    const { signInWithGoogle, setUser, setIsLoading, loginWithEmailAndPassword } = useAuth();
+    const { signInWithGoogle, user, setUser, saveUser, setIsLoading, loginWithEmailAndPassword } = useAuth();
 
 
     const history = useHistory();
@@ -21,8 +21,11 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         signInWithGoogle()
             .then(res => {
+                const loggedInUser = res.user;
                 setIsLoading(true);
-                setUser(res.user);
+                setUser(loggedInUser);
+                console.log(loggedInUser);
+                saveUser(loggedInUser.email, loggedInUser.displayName, 'PUT');
                 history.push(url);
             })
             .catch(err => console.log(err))
