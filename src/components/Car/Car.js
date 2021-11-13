@@ -13,7 +13,7 @@ const Car = ({ car }) => {
         history.push(url);
     }
     return (
-        <div className="col-lg-4 col-md-6 col-sm-12  ">
+        <div className="col-lg-4 col-md-6 col-sm-12 shadow-lg ">
             <div className="border p-1 ">
                 <img className=" w-100" src={img} alt="" />
                 <div className="my-2">
@@ -27,7 +27,7 @@ const Car = ({ car }) => {
 
                     <p className="text-start"><small>{released} • {mode} • {color} • {fuel} • {seats}</small></p>
 
-                    <button onClick={() => handleBuyNow(_id)} className="btn w-100 btn-primary btn-block">Buy Now</button>
+                    <button onClick={() => handleBuyNow(_id)} className="btn w-100 btn-dark btn-block">Buy Now</button>
                 </div>
             </div>
 
