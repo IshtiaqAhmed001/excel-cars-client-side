@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Spinner } from "react-bootstrap";
 
 const useRegisteredUsers = () => {
     const [isLoading, setIsLoading] = useState(true);

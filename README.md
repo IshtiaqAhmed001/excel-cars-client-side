@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Excel Cars - A car dealership site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A car dealership, or vehicle local distribution, is a business that sells new or used cars at the retail level, based on a dealership contract with an automaker or its sales subsidiary.
 
-## Available Scripts
+Excel Cars is a car dealing website providing a wide range of affordable vehicles for everyone. We have certified vehicles of various types and lots of additional products and accessories. We provide the best deals in case of service and money.
 
-In the project directory, you can run:
+## Pages/Features
+This website has 10 pages.Some pages are public and some are protected,which means user needs to be logged in to access those pages/features and among those pages some pages are accessible only when the logged in user is an Admin.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Pages               | Details
+-------------       | -------------
+Home                | main landing page includes featured cars,reviews etc..
+Cars                | shows the available Cars for sale
+Add a Review        | let's user to add new review to the website
+My Orders           | let's user check/cancel orders
+Make Payment        | let's user complete the payment process
+Add a New Car       | let's user to add new car/item to the website as an Admin
+Manage All Orders   | let's user to update/delete orders/bookings as an Admin
+Manage All Product  | let's user to delete any items/cars as an Admin
+Make Admin          | let's Admin to delete any items/cars as an Admin
+Login/Register      | Login and Registration pages
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Project Details
 
-### `npm test`
+To the frontend(client side) we used React,which is a JavaScript Library. We also implemented react router here so the pages of the site loads faster than the regular websites.We used firebase authentication system and private route too.For styling we used a combination of vanilla css and bootstrap.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For backend (server side) used node and express as a framework.
+And lastly for storing data we used mongodb which is a nosql database.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Live client site link:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Live server site link:

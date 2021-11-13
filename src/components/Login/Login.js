@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 
 
 const Login = () => {
-    const { signInWithGoogle, user, setUser, saveUser, setIsLoading, loginWithEmailAndPassword } = useAuth();
+    const { signInWithGoogle, setUser, saveUser, setIsLoading, loginWithEmailAndPassword } = useAuth();
 
 
     const history = useHistory();
@@ -53,8 +53,7 @@ const Login = () => {
 
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                console.log(error.code, error.message);
             })
             .finally(() => {
                 setIsLoading(false);
