@@ -9,7 +9,7 @@ const AddNewCar = () => {
 
         const newCar = { name, price, img, coverImg, madeIn, milage, fuel, mode, seats, released };
 
-        fetch('http://localhost:5000/cars', {
+        fetch('https://floating-taiga-26098.herokuapp.com/cars', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

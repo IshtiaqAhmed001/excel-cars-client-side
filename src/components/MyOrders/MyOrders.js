@@ -7,7 +7,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/myorders?email=${user.email}`
+        const url = `https://floating-taiga-26098.herokuapp.com/myorders?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data));
@@ -16,7 +16,7 @@ const MyOrders = () => {
     const handleCancelOrder = id => {
         const proceed = window.confirm('Are you sure you want to cancel ?');
         if (proceed) {
-            const url = `http://localhost:5000/myorders/${id}`;
+            const url = `https://floating-taiga-26098.herokuapp.com/myorders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -10,7 +10,7 @@ const AddNewReview = () => {
 
         const newReview = { name, img, ordered, comment, ratings };
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://floating-taiga-26098.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

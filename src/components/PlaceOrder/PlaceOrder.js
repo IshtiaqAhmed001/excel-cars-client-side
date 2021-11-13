@@ -16,7 +16,7 @@ const PlaceOrder = () => {
         const { name, email, address, city, phone } = data;
         let newOrder = { status: 'processing', name, email, address, city, phone };
         newOrder.itemDetails = singleCar[0];
-        fetch('http://localhost:5000/placeorder', {
+        fetch('https://floating-taiga-26098.herokuapp.com/placeorder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

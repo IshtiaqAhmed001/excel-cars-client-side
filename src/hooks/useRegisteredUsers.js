@@ -5,7 +5,7 @@ const useRegisteredUsers = () => {
 
     const [registeredUsers, setRegisteredUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://floating-taiga-26098.herokuapp.com/users')
             .then(res => res.json())
             .then(data => {
                 setRegisteredUsers(data)

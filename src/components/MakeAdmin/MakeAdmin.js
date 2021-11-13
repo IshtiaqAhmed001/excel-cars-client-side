@@ -10,7 +10,7 @@ const MakeAdmin = () => {
         updatedUsers[0].role = "admin";
         const updatedUser = updatedUsers[0];
 
-        const url = `http://localhost:5000/users/${email}`;
+        const url = `https://floating-taiga-26098.herokuapp.com/users/${email}`;
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -7,7 +7,7 @@ const ManageAllProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/cars')
+        fetch('https://floating-taiga-26098.herokuapp.com/cars')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
@@ -15,7 +15,7 @@ const ManageAllProducts = () => {
     const handleDeleteProduct = id => {
         const proceed = window.confirm('Are you sure you want to cancel ?');
         if (proceed) {
-            const url = `http://localhost:5000/cars/${id}`;
+            const url = `https://floating-taiga-26098.herokuapp.com/cars/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
