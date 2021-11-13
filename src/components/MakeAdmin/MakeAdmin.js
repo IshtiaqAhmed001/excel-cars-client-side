@@ -29,7 +29,7 @@ const MakeAdmin = () => {
 
     return (
         <div>
-            <h1 className="display-5 mt-5">Number of Registered Users: {registeredUsers.length}</h1>
+            <h1 className="display-5 mt-5 text-primary fw-bold">Number of Registered Users: {registeredUsers.length}</h1>
             <hr className="w-50 mx-auto mb-5" />
 
             <div className="my-5 container">

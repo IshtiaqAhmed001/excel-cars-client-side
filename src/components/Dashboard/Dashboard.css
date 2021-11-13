@@ -1,11 +1,11 @@
 .side-bar{
     /* background-color: #212529; */
-    background-color: #212529d2;
+    background-color: #151515;
     height: 100vh;
 }
 .side-bar-logout-btn{
     margin-left: 14px;
-    background-color: #484B4F;
+    background-color: #151515;
     border: none;
     font-weight: 600;
     color: whitesmoke;

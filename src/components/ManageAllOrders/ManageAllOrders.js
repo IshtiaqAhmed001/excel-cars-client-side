@@ -51,7 +51,7 @@ const ManageAllOrders = () => {
 
     return (
         <div>
-            <h1 className="display-5 mt-5">Total Bookings on website: {orders.length}</h1>
+            <h1 className="display-5 mt-5 text-primary fw-bold">Total orders on website: {orders.length}</h1>
             <hr className="w-50 mx-auto mb-5" />
 
             <div className="my-5 container">

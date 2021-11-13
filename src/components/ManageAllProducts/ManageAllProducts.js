@@ -32,7 +32,7 @@ const ManageAllProducts = () => {
 
     return (
         <div>
-            <h1 className="display-5 mt-5">Cars available: {products.length}</h1>
+            <h1 className="display-5 mt-5 text-primary fw-bold">Cars available: {products.length}</h1>
             <hr className="w-50 mx-auto mb-5" />
 
             <div className="my-5 container">
